@@ -3,6 +3,13 @@ pipeline {
     agent {label "one"}
 
     stages {
+        stage('hello'){
+            steps{
+                script{
+                    hello()
+                }
+            }
+        }
         stage('code_clone') {
             steps {
                 script{
